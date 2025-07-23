@@ -95,7 +95,7 @@ const FormPage = () => {
       className="relative flex flex-col px-2 md:flex-row"
       onSubmit={reviewInvoiceHandler}
     >
-      <div className="my-6 flex-1 space-y-4 rounded-lg bg-white p-6 shadow-sm">
+      <div className="my-6 flex-1 space-y-4 rounded-lg bg-white  p-6 shadow-sm">
         {/* ENVOYCE Header */}
         <div className="border-b border-purple-100 pb-4">
           <h1 className="text-center ml-100 border-4 rounded-full w-38  border-purple-00 text-3xl font-bold tracking-tighter text-purple-600 font-mono">
@@ -112,7 +112,7 @@ const FormPage = () => {
               </label>
               <input
                 required
-                className="w-24 rounded-lg border border-gray-300 bg-gray-50 px-3 py-1 text-center focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
+                className="w-24 rounded-lg border border-gray-300 bg-white px-3 py-1 text-center focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
                 type="number"
                 name="invoiceNumber"
                 id="invoiceNumber"
@@ -133,7 +133,7 @@ const FormPage = () => {
             </label>
             <input
               required
-              className="rounded-lg border border-gray-300 bg-gray-50 px-3 py-2 focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
+              className="rounded-lg border border-gray-300 bg-white px-3 py-2 focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
               placeholder="Name"
               type="text"
               name="cashierName"
@@ -148,7 +148,7 @@ const FormPage = () => {
             </label>
             <input
               required
-              className="rounded-lg border border-gray-300 bg-gray-50 px-3 py-2 focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
+              className="rounded-lg border border-gray-300 bg-white px-3 py-2 focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
               placeholder="Name"
               type="text"
               name="customerName"
@@ -162,11 +162,11 @@ const FormPage = () => {
         {/* Items Table - Purple Accents */}
         <table className="w-full pt-4">
           <thead>
-            <tr className="border-b border-purple-200 bg-purple-50 text-sm text-purple-500">
-              <th className="py-2 text-left font-medium">ITEM</th>
+            <tr className="border-2 border-purple-200 bg-purple-50 text-sm text-purple-500">
+              <th className="pl-2 text-left font-medium">ITEM</th>
               <th className="py-2 text-left font-medium">QTY</th>
               <th className="py-2 text-left font-medium">PRICE</th>
-              <th className="py-2 text-left font-medium">ACTION</th>
+              <th className="pr-2 text-left font-medium">ACTION</th>
             </tr>
           </thead>
           <tbody>
@@ -188,9 +188,13 @@ const FormPage = () => {
         <button
           type="button"
           onClick={addItemHandler}
-          className="mt-4 inline-flex items-center rounded-full bg-purple-500 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
-        >
-          + Add Item
+          className="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md group">
+          <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </span>
+          <span class="absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease">+ Add Item</span>
+          <span class="relative invisible">+ Add Item</span>
+      
         </button>
 
         {/* Totals Section */}
@@ -216,13 +220,17 @@ const FormPage = () => {
 
       {/* Right Sidebar */}
       <div className="basis-1/4 bg-transparent">
-        <div className="sticky top-0 z-10 space-y-4 divide-y divide-gray-200 pb-8 pl-4 pt-6">
+        <div className="sticky bg-purple-50 top-6 rounded-lg  z-10 space-y-10 divide-y shadow-sm  divide-gray-200 pb-18 pr-10 pl-4 pt-6 ">
           {/* Review Invoice Button */}
           <button
             type="submit"
-            className="w-full rounded-full bg-purple-500 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
-          >
-            Review Invoice
+            className="relative inline-flex items-center justify-center p-4 mt-6 px-10 py-3 w-48 ml-10 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md group">
+          <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </span>
+          <span class="absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease">See Invoice</span>
+          <span class="relative invisible">See Invoice</span>
+          
           </button>
 
           <Modal
@@ -243,7 +251,7 @@ const FormPage = () => {
           
 
           {/* Tax/Discount Inputs */}
-          <div className="space-y-4 pt-4">
+          <div className="space-y-4 pt-1">
             <div className="space-y-2">
               <label className="text-sm font-medium" htmlFor="tax">
                 Tax Rate
