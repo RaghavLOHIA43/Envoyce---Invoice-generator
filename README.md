@@ -2,14 +2,18 @@
 
 A modern, minimal, and customizable invoice generator built with **React**. Envoyce allows users to add items, calculate taxes and discounts, and generate print-ready invoices — all from a clean and responsive UI.
 
-<p align="center">
-  <img src="./Screenshot%202025-07-25%20at%2010.48.07%E2%80%AFPM.png" alt="Invoice Preview 1" width="45%" style="margin-right: 10px;" />
-  <img src="./Screenshot%202025-07-25%20at%2010.55.06%E2%80%AFPM.png" alt="Invoice Preview 2" width="45%" />
-</p>
+<img width="1731" height="878" alt="Screenshot 2025-07-25 at 10 48 07 PM" src="https://github.com/user-attachments/assets/bbc0e952-3228-4b80-aed2-ac761ca38247" />
+
+
+<img width="1760" height="982" alt="Screenshot 2025-07-25 at 10 55 06 PM" src="https://github.com/user-attachments/assets/32b5bf97-8a7c-4e1d-8009-cf9a5199406b" />
+
+
+
 
 ---
 
 ## 🚀 Features
+
 
 - Add and remove multiple line items dynamically  
 - Auto calculation of:
